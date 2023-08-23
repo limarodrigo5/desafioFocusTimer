@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+    font-family: sans-serif;
+    --bg-color: hsla(0, 0%, 100%, 1);
+    --text-color:hsla(240, 6%, 21%, 1);
+    --card-color:hsla(240, 9%, 89%, 1);
+    --onclickcard-color:hsla(194, 97%, 31%, 1);
+}
+
+
+
+.sr-only {
+    width: 1px;
+height: 1px;
+position: absolute;
+overflow: hidden;
+
+margin: -1px;
+padding: 0;
+border: 0;
+appearance: none;
+}
+
+body {
+background-color: var(--bg-color);
+
+display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+.container {
+    
+    margin-top: -10rem;
+    width: 82.1rem;
+    height: 33.6rem;
+}
+
+.left-side {
+    position: relative;
+    top: 5.8rem;
+
+    width: 32.1rem;
+    height: 21.3rem;
+}
+
+.flex {
+    
+    display: flex;
+    justify-content: center;
+
+}
+
+#timer {
+    width: 32.1rem;
+    height: 14.8rem;
+
+    text-align: center;
+font-size: 12.6rem;
+font-weight: 500;
+text-transform: uppercase;
+}
+
+#controls {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 4.8rem;
+    gap: 4rem;
+    
+}
+
+button {
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: transparent;
+    border: 0;
+    font-size: 4.8rem;
+    cursor: pointer;
+}
+
+
+#cards {
+    position: relative;
+    width: 30.8rem;
+    height: 33.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 3.2rem;
+    left: 51.3rem;
+    bottom: 21.4rem;
+
+   
+}
+
+#cards svg {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+
+#cards img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle
+ {
+    display: none;
+}
+
+.secondary {
+    color: var(--onclickcard-color)
+}
